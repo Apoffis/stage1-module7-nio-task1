@@ -15,7 +15,7 @@ public class FileReader {
 
     public static void main(String[] args) {
         File file = new File("src/main/resources/Profile.txt");
-        System.out.println(new FileReader().getDataFromFile(file));
+        new FileReader().getDataFromFile(file);
     }
 
     public Profile getDataFromFile(File file) {
@@ -31,7 +31,7 @@ public class FileReader {
             }
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
 
