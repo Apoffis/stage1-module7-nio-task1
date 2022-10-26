@@ -23,7 +23,7 @@ public class FileReader {
         List<String> strings = new ArrayList<>();
 
         try (Stream<String> stream = Files.lines(Paths.get(file.getPath()))) {
-            stream.forEach(i -> strings.add(i));
+            stream.forEach(strings::add);
 
             for (String l : strings) {
                 String[] keyVal = l.split(": ");
